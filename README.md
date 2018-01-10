@@ -1,4 +1,4 @@
-# promise [![Build Status](https://travis-ci.org/matthewdale/promise.svg?branch=master)](https://travis-ci.org/matthewdale/promise)
+# promise [![Build Status](https://travis-ci.org/matthewdale/promise.svg?branch=master)](https://travis-ci.org/matthewdale/promise) [![codecov](https://codecov.io/gh/matthewdale/promise/branch/master/graph/badge.svg)](https://codecov.io/gh/matthewdale/promise)
 
 A simple, fast implementation of a promise in Go.
 
@@ -13,7 +13,7 @@ func do() (string, error) {
 
 func doAsync() *promise.Promise {
     p := promise.NewPromise()
-    
+
     // Start a goroutine that completes the promise
     // once the result is returned.
     go func() {
@@ -29,7 +29,7 @@ func doAsync() *promise.Promise {
 
 func main() {
     p := doAsync()
-    
+
     // Calling 'Get' blocks until the result is ready.
     v, err := p.Get()
     if err != nil {
