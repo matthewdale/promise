@@ -1,6 +1,7 @@
 package promise
 
 import (
+	"errors"
 	"sync"
 	"testing"
 	"time"
@@ -85,6 +86,17 @@ func TestPromise_multipleComplete(t *testing.T) {
 	v, err := p.Get()
 	assert.NoError(t, err, "Unexpected error")
 	assert.Equal(t, "ok", v, "Got unexpected value from promise")
+}
+
+func TestPromise_error(t *testing.T) {
+	p := NewPromise()
+	go func() {
+		time.Sleep(1 * time.Second)
+		p.CompleteWithError(errors.New("Expected error"))
+	}()
+	v, err := p.Get()
+	assert.Error(t, err, "Expected an error")
+	assert.Equal(t, nil, v, "Got unexpected value from promise")
 }
 
 func TestAll(t *testing.T) {
