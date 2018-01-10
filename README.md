@@ -1,4 +1,4 @@
-# promise [![Build Status](https://travis-ci.org/matthewdale/promise.svg?branch=master)](https://travis-ci.org/matthewdale/promise) [![codecov](https://codecov.io/gh/matthewdale/promise/branch/master/graph/badge.svg)](https://codecov.io/gh/matthewdale/promise)
+# promise [![Build Status](https://travis-ci.org/matthewdale/promise.svg?branch=master)](https://travis-ci.org/matthewdale/promise) [![codecov](https://codecov.io/gh/matthewdale/promise/branch/master/graph/badge.svg)](https://codecov.io/gh/matthewdale/promise) [![Go Report Card](https://goreportcard.com/badge/github.com/matthewdale/promise)](https://goreportcard.com/report/github.com/matthewdale/promise) [![GoDoc](https://godoc.org/github.com/matthewdale/promise?status.svg)](https://godoc.org/github.com/matthewdale/promise)
 
 A simple, fast implementation of a promise in Go.
 
